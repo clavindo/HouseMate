@@ -68,14 +68,6 @@
 			border-radius:3px;
 			padding: 10px 21px 5px 21px;
 		}
-		
-		.signin-input {
-			height: 64px;
-			width: 80%;
-			font-size: 16px;
-			display:block;
-			margin: 0px auto;
-		}
 	</style>
 </head>
 
@@ -88,13 +80,12 @@
 			<img src="pic/logo-ex.jpg" width="15%" height="15%" style="left: -50px"/>
 		</a>
 	
-			<ul>
-				<li><a href="#">호스팅 하기</a></li>
-				<li><a href="#">도움말</a></li>
-				<li><a href="#">회원가입</a></li>
-				<li><a href="#" data-toggle="modal" data-target="#loginModal">로그인</a></li>
-			<ul>
-		
+		<ul>
+			<li><a href="#">호스팅 하기</a></li>
+			<li><a href="#">도움말</a></li>
+			<li><a href="#">회원가입</a></li>
+			<li><a href="#" data-toggle="modal" data-target="#loginModal">로그인</a></li>
+		<ul>
 	</div>
 	
 	<div id="content-menu">
@@ -130,36 +121,15 @@
 		<div class="modal-body">
 		  <div>
 			<form action="" method="POST">
-				<button type="submit" class="btn btn-primary" style="display: block; margin: auto; width: 85%; margin-bottom: 5px;">페이스북으로 로그인하기</button>
+				<button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 5px">페이스북으로 로그인하기</button>
 			</form>
 		  </div>
           <div>
 			<form action="" method="POST">
-				<button type="button" class="btn btn-danger" style="display: block; margin: auto; width: 85%">구글로 로그인하기</button>
+				<button type="button" class="btn btn-danger" style="width: 100%">구글로 로그인하기</button>
 			</form>
 		  </div>
         </div>
-		
-		<form action="" method="POST">
-		
-			<div>
-				<input style="margin-bottom: 5px;" class="signin-input" type="email" id="signin_email" name="email" placeholder="이메일 주소" style=/>
-			</div>
-		
-			<div>
-				<input style="margin-bottom: 8px;" class="signin-input" type="password" id="signin_passowrd" name="password" placeholder="비밀번호" />
-			</div>
-			
-			<div>
-				<a style="margin-left: 50px; margin-bottom: -25px; color: #484848;" href="/forgot_password" data-form="email">비밀번호가 생각나지 않으세요?</a>
-			</div>
-			
-			<div>
-				<button style="margin-bottom: 10px; width: 85%; margin: auto;" type="submit" class="btn btn-block signup-login-form__btn-xl btn-primary btn-large" id="user-login-btn">로그인</button>
-			</div>
-		</form>
-		
-		<br />
 		
 		<div class="modal-footer">
 			<div>
