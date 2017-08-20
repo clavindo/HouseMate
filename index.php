@@ -9,17 +9,14 @@
 	
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 	<script>
 		window.onload = function(){
 			
 		}
 		
-		function showLoginForm() {
-			window.getElementById("loginForm").style.display = "inline";
-		}
 	</script>
 	
 	<style>
@@ -45,7 +42,7 @@
 			border-bottom: 2px solid black;
 		}
 		li a {
-			text-decoration: none;
+			text-decoration: none !important; /* Removes underline when hovering over */
 			color: black;
 		}
 		div#content-menu {
@@ -62,7 +59,7 @@
 			color: #008489;
 			border-bottom: 3px solid #008489;
 		}
-		a#btn-modal-register {
+		a#btn-modal-register, a#btn-modal-login {
 			color: #ff5a5f;
 			border: 1px solid #ff5a5f;
 			border-radius:3px;
@@ -75,6 +72,7 @@
 			font-size: 16px;
 			display:block;
 			margin: 0px auto;
+			padding: 10px;
 		}
 	</style>
 </head>
@@ -91,7 +89,7 @@
 			<ul>
 				<li><a href="#">호스팅 하기</a></li>
 				<li><a href="#">도움말</a></li>
-				<li><a href="#">회원가입</a></li>
+				<li><a href="#" data-toggle="modal" data-target="#signupModal">회원가입</a></li>
 				<li><a href="#" data-toggle="modal" data-target="#loginModal">로그인</a></li>
 			<ul>
 		
@@ -116,6 +114,48 @@
 </html>
 
 <!-- Modal -->
+<div class="modal fade" id="signupModal" role="dialog">
+	
+	<div class="modal-dialog">
+    
+		<!-- Modal content-->
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">회원 가입</h4>
+			</div>
+			
+			<div class="modal-body">
+				<div>
+					<form action="" method="POST">
+						<button type="submit" class="btn btn-primary" style="display: block; margin: auto; width: 85%; margin-bottom: 5px;">페이스북으로 회원 가입하기</button>
+					</form>
+				</div>
+			
+				<div>
+					<form action="" method="POST">
+						<button type="button" class="btn btn-danger" style="display: block; margin: auto; width: 85%">구글로 회원 가입하기</button>
+					</form>
+				</div>
+			
+			</div>
+			
+			<div class="modal-footer">
+				<div>
+					<span style="float: left;">이미 House Mate 계정이 있나요?</span>
+					<span>
+						<a style="text-decoration: none !important;" id="btn-modal-login" href="#" data-toggle="modal" data-target="#loginModal">로그인</a>
+					</span>
+				</div>
+			</div>
+			
+        </div>
+
+	</div>
+</div>
+
+
   <div class="modal fade" id="loginModal" role="dialog">
     <div class="modal-dialog">
     
@@ -143,7 +183,7 @@
 		<form action="" method="POST">
 		
 			<div>
-				<input style="margin-bottom: 5px;" class="signin-input" type="email" id="signin_email" name="email" placeholder="이메일 주소" style=/>
+				<input style="margin-bottom: 5px;" class="signin-input" type="email" id="signin_email" name="email" placeholder="이메일 주소"/>
 			</div>
 		
 			<div>
@@ -165,7 +205,7 @@
 			<div>
 				<span style="float: left;">House Mate 계정이 없으세요?</span>
 				<span>
-					<a id="btn-modal-register" href="" >회원 가입</a>
+					<a style="text-decoration: none !important;" id="btn-modal-register" href="">회원 가입</a>
 				</span>
 			</div>
 		</div>
