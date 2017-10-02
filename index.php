@@ -127,6 +127,7 @@
 			</div>
 			
 			<div class="modal-body">
+				
 				<div>
 					<form action="" method="POST">
 						<button type="submit" class="btn btn-primary" style="display: block; margin: auto; width: 85%; margin-bottom: 5px;">페이스북으로 회원 가입하기</button>
